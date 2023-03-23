@@ -2,9 +2,9 @@ let inputA = "52";
 let inputB = "52.273";
 let inputC = "1401동";
 
-console.log(parseInt(inputA));
+console.log(parseInt(inputA));  //52
 
-console.log(parseInt(inputB));
-console.log(parseFloat(inputB));
+console.log(parseInt(inputB));  //52
+console.log(parseFloat(inputB));    //52.273
 
-console.log(parseInt(inputC));
+console.log(parseInt(inputC));  //1401
