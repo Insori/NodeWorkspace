@@ -10,6 +10,7 @@ let product = {
 
 console.log(product);
 
+console.log('---------------------------------------------');
 
 //이름, 학번, 전공, 연락처를 가진 학생 객체를 선언하고 출력
 let student = {
@@ -20,3 +21,17 @@ let student = {
 };
 
 console.log(student);
+
+console.log('---------------------------------------------');
+
+let object = {
+    name : '바나나',
+    price : 1200,
+    print : function() {
+        console.log(`${name}의 가격은 ${price}원 입니다.`);
+    }
+};
+
+//객체 접근
+console.log(object.name + '\t' + object.price);
+console.log(object.print);
