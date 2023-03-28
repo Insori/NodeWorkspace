@@ -23,3 +23,7 @@ let products = [
 for(let product of products) {
     product.print();
 }
+
+products.forEach(element => {
+    console.log(element.name + "\t" + element.price);
+});
