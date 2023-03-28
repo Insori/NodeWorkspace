@@ -28,10 +28,10 @@ let object = {
     name : '바나나',
     price : 1200,
     print : function() {
-        console.log(`${name}의 가격은 ${price}원 입니다.`);
+        console.log(`${this.name}의 가격은 ${this.price}원 입니다.`);
     }
 };
 
 //객체 접근
 console.log(object.name + '\t' + object.price);
-console.log(object.print);
+object.print();
