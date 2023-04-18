@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.get('/', (req, res) => {
     console.log('/ get start');
-    fs.readFile('ex02.ejs', "utf-8", (err, data) => {
+    fs.readFile('login.ejs', "utf-8", (err, data) => {
         if(err) {
             console.log('파일 읽기 에러 ' + err);
         } else {
@@ -17,6 +17,28 @@ app.get('/', (req, res) => {
         }
     })
 });
+app.get('/login', (req, res) => {
+    console.log('/login get...');
+    fs.readFile('login.ejs', "utf-8", (err, data) => {
+        if(err) {
+            console.log('login.ejs 파일 읽기 에러 '+err);
+        } else {
+            res.send(ejs.render(data));
+        }
+    })
+})
+app.post('/login', (req, res) => {
+    let inId = req.body.id;
+    let inPass = req.body.password;
+    console.log('입력한 값 '+inId+inPass);
+    if(inId == 'Andy' && inPass == '1234') {
+        console.log('로그인 성공');
+        res.redirect('/');
+    } else {
+        console.log('로그인 실패'+inId+inPass);
+        res.redirect('/login');
+    }
+})
 app.listen(3000, () => {
     console.log('server starting 3000');
 })
