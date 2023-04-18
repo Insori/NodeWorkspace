@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.get('/', (req, res) => {
     console.log('/ get start');
-    fs.readFile('ex01.ejs', "utf-8", (err, data) => {
+    fs.readFile('ex02.ejs', "utf-8", (err, data) => {
         if(err) {
             console.log('파일 읽기 에러 ' + err);
         } else {
