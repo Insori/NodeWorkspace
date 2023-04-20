@@ -15,9 +15,10 @@ app.get('/', (req, res) => {
     console.log('/ get start');
     res.render('ex04', {
         dataArr : [
-            '0번째 인덱스 : 최종수',
-            '1번째 인덱스 : 박병찬',
-            '2번째 인덱스 : 기상호'
+            {name : '최종수', age : 19},
+            {name : '박병찬', age : 21},
+            {name : '기상호', age : 16},
+            {name : '전영중', age : 19}
         ]
     }); //확장자 안 써도 됨
     // fs.readFile('ex03.ejs', "utf-8", (err, data) => {
