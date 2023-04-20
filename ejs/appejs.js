@@ -7,9 +7,13 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
+//ejs 모듈 추가
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 app.get('/', (req, res) => {
     console.log('/ get start');
-    fs.readFile('login.ejs', "utf-8", (err, data) => {
+    fs.readFile('ex03.ejs', "utf-8", (err, data) => {
         if(err) {
             console.log('파일 읽기 에러 ' + err);
         } else {
