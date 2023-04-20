@@ -13,11 +13,12 @@ app.set('views', './views');
 
 app.get('/', (req, res) => {
     console.log('/ get start');
-    res.render('ex03', {
-        jemok : 'ejs 제목 데이터',
-        count : 4,
-        no : '3010',
-        name : 'Andy'
+    res.render('ex04', {
+        dataArr : [
+            '0번째 인덱스 : 최종수',
+            '1번째 인덱스 : 박병찬',
+            '2번째 인덱스 : 기상호'
+        ]
     }); //확장자 안 써도 됨
     // fs.readFile('ex03.ejs', "utf-8", (err, data) => {
     //     if(err) {
